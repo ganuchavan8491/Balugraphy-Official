@@ -1,0 +1,34 @@
+.dir-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.dir-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  transition: transform .35s ease;
+  transform: translate(0,0);
+}
+
+/* Enter Start Positions */
+.from-top    { transform: translateY(-100%); }
+.from-right  { transform: translateX(100%); }
+.from-bottom { transform: translateY(100%); }
+.from-left   { transform: translateX(-100%); }
+
+/* Enter End */
+.in {
+  transform: translate(0,0);
+}
+
+/* Exit */
+.out-top    { transform: translateY(-100%); }
+.out-right  { transform: translateX(100%); }
+.out-bottom { transform: translateY(100%); }
+.out-left   { transform: translateX(-100%); }

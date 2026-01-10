@@ -1,0 +1,57 @@
+.hero-btn {
+  position: relative;
+  padding: 12px 38px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  letter-spacing: 0.6px;
+  color: #fff;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.35);
+  
+  /* Smooth transitions */
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  
+  overflow: hidden;
+  
+  /* Idle cinematic pulse */
+  animation: filmPulse 4s ease-in-out infinite;
+}
+
+/* Hover state - cinematic + crisp */
+.hero-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.40);
+  border-color: #fff;
+  filter: brightness(1.12) contrast(1.08);
+  box-shadow: 0 8px 28px rgba(255,255,255,0.35);
+}
+
+/* Lens flare highlight (subtle photography vibe) */
+.hero-btn::after {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.hero-btn:hover::after {
+  opacity: 1;
+}
+
+/* Idle Film Pulse */
+@keyframes filmPulse {
+  0%   { filter: brightness(1) }
+  50%  { filter: brightness(1.07) }
+  100% { filter: brightness(1) }
+}
