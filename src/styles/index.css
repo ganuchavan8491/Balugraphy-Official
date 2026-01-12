@@ -5,3 +5,63 @@
 body {
   padding-top: 4rem;
 }
+/* ---- MOBILE CINEMATIC LAYOUT ---- */
+@media (max-width: 768px) {
+  /* HERO */
+  .hero {
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* BUTTON CENTER */
+  .hero-btn {
+    display: inline-block;
+    margin: 14px auto;
+    padding: 12px 28px;
+  }
+
+  /* PORTFOLIO GRID */
+  .portfolio {
+    margin-top: 20px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .portfolio img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: scale .35s ease, opacity .35s ease;
+  }
+
+  .portfolio img:active {
+    scale: .97;
+    opacity: .9;
+  }
+
+  /* CATEGORIES */
+  .categories {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .categories div {
+    white-space: nowrap;
+    padding: 10px 18px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.1);
+  }
+
+  /* DISABLE CAMERA CURSOR MOBILE */
+  #camera-canvas,
+  #flash {
+    display: none !important;
+  }
+}
