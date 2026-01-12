@@ -41,10 +41,11 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="py-20 px-4 bg-gray-50">
+    // Background ko dark (#0a0a0a) kiya hai
+    <section id="services" className="py-20 px-4 bg-[#0a0a0a] text-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl mb-4 text-center">Services</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <h2 className="text-4xl md:text-5xl mb-4 text-center font-bold">Services</h2>
+        <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
           Professional photography services tailored to your needs
         </p>
 
@@ -54,19 +55,20 @@ export function Services() {
             return (
               <div
                 key={index}
-                className="bg-white p-8 rounded-sm hover:shadow-lg transition-shadow duration-300"
+                // White cards ko dark glass look (bg-white/5) mein badla hai
+                className="bg-white/5 p-8 rounded-sm border border-white/5 hover:border-white/20 transition-all duration-300 group"
               >
-                <Icon className="w-12 h-12 mb-4 text-gray-700" />
-                <h3 className="text-2xl mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <p className="text-sm">{service.price}</p>
+                <Icon className="w-12 h-12 mb-4 text-gray-300 group-hover:text-white transition-colors" />
+                <h3 className="text-2xl mb-3 font-semibold">{service.title}</h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{service.description}</p>
+                <p className="text-sm font-bold tracking-widest uppercase text-gray-300">{service.price}</p>
               </div>
             );
           })}
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-gray-500 mb-6">
             All packages include high-resolution digital files and professional editing
           </p>
           <button
@@ -74,7 +76,8 @@ export function Services() {
               const element = document.getElementById('contact');
               element?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-8 py-3 bg-black text-white hover:bg-gray-800 transition-colors rounded-sm"
+            // Button ko pure white aur text black kiya hai contrast ke liye
+            className="px-8 py-3 bg-white text-black font-bold hover:bg-gray-200 transition-colors rounded-sm uppercase tracking-wider text-sm"
           >
             Get a Custom Quote
           </button>
