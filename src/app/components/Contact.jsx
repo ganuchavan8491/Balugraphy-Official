@@ -138,7 +138,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-1">Location</h3>
-                  <p className="text-gray-400">New York, NY<br />Available for travel worldwide</p>
+                  <p className="text-gray-400">Panvel, Navi Mumbai<br />Available for travel worldwide</p>
                 </div>
               </div>
             </div>
